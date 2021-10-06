@@ -293,15 +293,12 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
  
-    var numeros = [];
-    var multiplicar = 1;
-  for (var i = 0; i < num.length; i++){
-
-    var per = num;
-    numeros.push(per);
-     multiplicar = multiplicar * 6 * numeros[i];
-  }
-  return multiplicar;
+    let resultado = []
+    for (let i=0; i<=10;i++)
+    {
+      resultado.push(i*6)
+    }
+    return resultado
 }
 
 
@@ -323,17 +320,12 @@ function doWhile(numero) {
   //Retornar el valor final.
   //Usar el bucle do ... while.
 
-
-var y = 0;
-
+let n = 0
 do{
-  numero = numero + 5;
-  y = y + 1;
-}
-while (y < 8);
-
-
-return x
+  n= n+1
+  numero = numero + 5
+}while(n < 8);
+return numero;
 }
 
 
