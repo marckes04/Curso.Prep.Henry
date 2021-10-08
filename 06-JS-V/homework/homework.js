@@ -8,25 +8,21 @@ function crearUsuario() {
   // {{nombre}} debe ser el nombre definido en cada instancia
   // Devuelve la clase
   // Tu código:
-  function Usuario(opciones){
-    this.Usuario = opciones.Usuario,
-    this.nombre = opciones.nombre,
+  function Usuario(opciones) {
+    this.usuario = opciones.usuario,
+    this.nombre  = opciones.nombre,
     this.email = opciones.email,
-    this.password = opciones.password
+    this.password = opciones.password 
 
-   // this.saludar = function(){
-     // return 'Hola, mi nombre es' + this.nombre
+   // this.saludar = function() {
+     // return 'Hola, mi nombre es ' + this.nombre;
    // }
-  
-
-  this.saludar = function()
-  {
-    return 'Hola, mi  nombre es' + this.nombre;
   }
- 
+  Usuario.prototype.saludar = function(){
+    return 'Hola, mi nombre es ' + this.nombre;
   } 
 
-  return Usuario
+  return Usuario;
 }
 
 
@@ -70,35 +66,31 @@ function agregarStringInvertida() {
     //  }
 
   class Persona {
-    constructor(nombre, apellido,edad,domicilio) {
-      // Crea el constructor:
-this.nombre = nombre
-this.apellido = apellido
-this.edad = edad
-this.domicilio = domicilio
+    constructor(nombre,apellido,edad,domicilio){
+      this.nombre = nombre;
+      this.apellido = apellido;
+      this.edad = edad;
+      this.domicilio = domicilio;
     }
-detalle(){
-  return{
-    Nombre: this.nombre,
-    Apellido: this.apellido,
-    Edad: this.edad,
-    Domicilio: this.domicilio
-   }
- }
+
+    detalle(){
+      return {
+        Nombre: this.nombre,
+        Apellido: this.apellido,
+        Edad:this.edad,
+        Domicilio: this.domicilio
+
+      }
+    }
 }
-
-function crearInstancia(nombre,apellido,edad,dir) {
-  
-  var NuevaPersona = new Persona('Juan', 'Perez',22,'Saavedra 123')
-return NuevaPersona
-}
-
-
 
 function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Con esta función vamos a crear una nueva persona a partir de nuestro constructor de persona (creado en el ejercicio anterior)
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
+
+  var nuevaPersona = new Persona('Juan', 'Perez',22, 'Saavedra 123')
+  return nuevaPersona
 }
   
 function agregarMetodo() {
@@ -106,7 +98,7 @@ function agregarMetodo() {
   //Ej: "Juan, 22 años"
 
   Persona.prototype.datos = function () {
-    return this.nombre + "," + this.edad + 'años'
+    return this.nombre + ", " + this.edad + ' años'
   }
 }
   
