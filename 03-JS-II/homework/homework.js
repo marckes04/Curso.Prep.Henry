@@ -294,7 +294,7 @@ function tablaDelSeis(){
   //Escribe tu código aquí   
  
     let resultado = []
-    for (let i=0; i<=10;i++)
+    for (let i=0 ; i<=10 ; i++)
     {
       resultado.push(i*6)
     }

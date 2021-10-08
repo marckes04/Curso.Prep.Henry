@@ -3,18 +3,24 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
+
+  return array[0]
+
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  return array[ array.length - 1]
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+
+  return array.length;
 }
 
 
@@ -23,9 +29,9 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-for (let i; i< array.length ; i++)
+for (let i = 0 ; i < array.length ; i++)
 {
-  array[i]=array[i]+1
+  array[i] = array[i] + 1;
 }
 return array;
 }
@@ -35,6 +41,9 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+array.push(elemento)
+return array
+
 }
 
 
@@ -43,6 +52,10 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+
+array.unshift(elemento)
+return array
+
 }
 
 
@@ -53,7 +66,7 @@ function dePalabrasAFrase(palabras) {
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
  // array = ['Hello', 'world!']
-  return array.join(' ');
+  return palabras.join(' ');
 }
 
 
@@ -105,15 +118,15 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-  var mayor = numeros[0];
-
-  for (let i = 0; i < array.length; i++) {
-    if(mayor < numeros[i]) {
-    mayor = numeros[i];
-    }
-    
-    }
-  return mayor;
+ var mayor = 0;
+ for(let i = 0; i < numeros.length; i++)
+ {
+   if(mayor < numeros[i])
+   {
+        mayor = numeros[i]
+   }
+ }
+      return mayor
 }
 
 
@@ -121,16 +134,18 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-  var total = 1
- if(arguments.length < 1)
- {
-   return 0;
- }
- for (var i = 0; i < array.length; i++) {
+  var total = 1;
+if(arguments.length < 1)
+{
+return 0;
+}
 
-   total = total * arguments[i];
- }
- return total;
+for(let i=0; i <arguments.length ;i++)
+{
+  total *= arguments[i];
+}
+
+return total
 }
 
 
